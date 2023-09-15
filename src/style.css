@@ -1,0 +1,84 @@
+p.center {
+    text-align: center;
+    color: lightblue;
+}
+
+p.lc {
+    text-align: center;
+    color: black;
+}
+p.large {
+    font-size: 300%;
+}
+h1 {
+    text-align: center;
+    color: blue;
+}
+p.ss {
+    border: 2px solid Tomato;
+}
+div {
+    background-color: lightgray;
+}
+
+div.first {
+    opacity: 0.1;
+}
+
+div.second {
+    opacity: 0.3;
+}
+
+div.third {
+    opacity: 0.6;
+}
+p.dotted {
+    border-style: dotted;
+}
+p.dashed {
+    border-style: dashed;
+}
+p.solid {
+    border-style: solid;
+}
+p.double {
+    border-style: double;
+    color: blue;
+}
+p.groove {
+    border-style: groove;
+}
+p.ridge {
+    border-style: ridge;
+}
+p.insert {
+    border-style: insert;
+}
+p.outset {
+    border-style: outset;
+}
+p.none {
+    border-style: none;
+}
+p.mix {
+    border-style: dotted dashed groove ridge;
+    color: red blue;
+}
+.content {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid lightblue;
+    padding: 50px;
+    margin: 20px;
+}
+.outline {
+    border: 2px solid black;
+    outline: gray solid 10px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* * {
+  text-align: center;
+  color: blue;
+} */
