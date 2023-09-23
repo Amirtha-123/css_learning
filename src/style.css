@@ -17,9 +17,6 @@ h1 {
 p.ss {
     border: 2px solid Tomato;
 }
-div {
-    background-color: lightgray;
-}
 
 div.first {
     opacity: 0.1;
@@ -40,6 +37,7 @@ p.dashed {
 }
 p.solid {
     border-style: solid;
+    border-radius: 10px;
 }
 p.double {
     border-style: double;
@@ -67,13 +65,13 @@ p.mix {
 .content {
     background-color: lightgrey;
     width: 300px;
-    height:50px;
+    height: 50px;
     border: 15px solid lightblue;
     padding: 50px;
     margin: 20px;
     font-family: "Lucida Console", "Courier New", monospace;
-    overflow-y:scroll;
-    overflow-x:hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .outline {
     border: 2px solid black;
@@ -100,11 +98,6 @@ h3 {
     text-decoration-style: dotted;
 }
 
-p {
-    text-decoration-line: overline underline;
-    text-decoration-color: purple;
-    text-decoration-style: double;
-}
 .shadow {
     color: white;
     text-shadow: 2px 2px 4px #000000;
@@ -159,22 +152,245 @@ ul li {
     margin: 5px;
 }
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .img-container {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    opacity: 0.1;
+    filter: grayscale(100);
+    //filter: invert(100%);
+}
+
+.img-container:hover {
+    opacity: 1;
+    transform: scaleX(-1);
 }
 
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
-/* * {
-  text-align: center;
-  color: blue;
+p i:first-child {
+    color: blue;
+}
+q:lang(no) {
+    quotes: "~""~";
+}
+::selection {
+    color: red;
+    background: yellow;
+}
+::marker {
+    color: red;
+    font-size: 23px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 5px 10px #888888;
+    padding: 12px 16px;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+input[type="text"] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("searchicon.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type="text"]:focus {
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+    background-color: #2196f3;
+    // justify-content: space-evenly;
+    padding: 10px;
+}
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#example1 {
+    background: url(img_forest.jpg) left top no-repeat,
+        url(img_mountains.jpg) right bottom no-repeat,
+        url(water.jpg) left top repeat;
+    padding: 15px;
+    background-size: 50px, 130px, auto;
+}
+#p1 {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+#p2 {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+#p3 {
+    background-color: rgba(0, 0, 255, 0.3);
+}
+#p4 {
+    background-color: rgba(192, 192, 192, 0.3);
+}
+#p5 {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+#p6 {
+    background-color: rgba(255, 0, 255, 0.3);
+}
+#grad1 {
+    height: 150px;
+    width: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+    margin-bottom: 30px;
+}
+#grad2 {
+    height: 200px;
+    width: 200px;
+    background-image: conic-gradient(red, yellow);
+    margin-bottom: 30px;
+}
+#grad3 {
+    height: 200px;
+    width: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: conic-gradient(red, yellow, green, blue, black);
+    border-radius: 50%;
+}
+p.test1 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+p.test2 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.polaroid {
+    width: 10%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // margin-left: 50%;
+}
+
+div.container {
+    text-align: center;
+    padding: 10px 20px;
+}
+.img {
+    -webkit-box-reflect: right;
+}
+.object-fit {
+    weight: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.not {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
 } */
-s
+
+/* li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: lightgrey;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} */
